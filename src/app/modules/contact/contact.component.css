@@ -1,0 +1,17 @@
+body{
+  text-align: center;
+  width: 100vw;
+}
+.container {
+  width: 100vw; 
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  flex: 1;
+}
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+  }

@@ -1,0 +1,20 @@
+<body>
+  <app-navbar></app-navbar>
+    <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title">Projetos</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          @for (project of projects; track project) {
+            <h3>{{project.name}}</h3>
+            <p>{{project.description}}</p>
+            <div class="project-links">
+              <a [href]="project.github" target="_blank" class="btn btn-primary">GitHub</a>
+          </div>
+        }
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-footer></app-footer>
+</body>
