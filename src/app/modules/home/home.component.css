@@ -1,29 +1,99 @@
-.container {
-    width: 100vw; 
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    flex: 1;
-}
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
   }
-  .skill-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .skill-card:hover{
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  .skill-card h3 {
+
+  h1, h2, h4 {
     color: #2c3e50;
-    margin-bottom: 10px;
+    margin: 0;
+  }
+
+  .intro-text {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+ .layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+  width: 90vw;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #3498db;
+    border-radius: 2px;
+    margin-top: 8px;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+    padding: 20px 0;
+  }
+
+  .skill-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .skill-card h4 {
+    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+    color: #34495e;
+  }
+
+  .skill-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+
+  @media (max-width: 600px) {
+    .skill-card {
+      flex-direction: column;
+      text-align: center;
+    }
+    .skill-card img {
+      margin-bottom: 10px;
+    }
   }

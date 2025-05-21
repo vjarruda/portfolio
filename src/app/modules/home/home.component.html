@@ -1,25 +1,41 @@
 <body>
-  <app-navbar></app-navbar>
-  <div class="container">
-    <h1>Bem-vindo!</h1>
-    <p>Este é o meu portfólio, onde apresento meus projetos e habilidades.</p>
-    <h2 class="section-title">Habilidades</h2>
-    <div class="skills-grid">
-      @for (skill of skills; track skill.name) {
-      <div class="skill-card">
-        <img
-          [src]="skill.logo"
-          [alt]="skill.name + ' logo'"
-          width="40"
-          height="40"
-        />
-        <div>
-          <h4>{{ skill.name }}</h4>
-          <p>{{ skill.level }}</p>
+  <div class="layout">
+    <app-navbar></app-navbar>
+
+    <div class="container">
+      <h1>Bem-vindo!</h1>
+      <p class="intro-text">
+        Este é o meu portfólio, onde apresento meus projetos e habilidades.
+      </p>
+      <h2 class="section-title">Sobre Mim</h2>
+        <div class="about-content">
+          <p>
+            Sou um desenvolvedor full stack apaixonado por criar soluções web inovadoras.
+            Com experiência em várias tecnologias modernas, busco sempre aprender e evoluir
+            na minha carreira.
+          </p>
         </div>
+
+      <h2 class="section-title">Habilidades</h2>
+
+      <div class="skills-grid">
+        @for (skill of skills; track skill.name) {
+          <div class="skill-card">
+            <img
+              [src]="skill.logo"
+              [alt]="skill.name + ' logo'"
+              width="50"
+              height="50"
+            />
+            <div>
+              <h4>{{ skill.name }}</h4>
+              <p>{{ skill.level }}</p>
+            </div>
+          </div>
+        }
       </div>
-      }
     </div>
+
+    <app-footer></app-footer>
   </div>
-  <app-footer></app-footer>
 </body>
