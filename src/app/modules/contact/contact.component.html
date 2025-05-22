@@ -1,16 +1,56 @@
 <body>
-  <app-navbar></app-navbar>
-  <section class="section" id="about">
+  <div class="layout">
+    <app-navbar></app-navbar>
+
+    <section class="section" id="about">
       <div class="container">
-        <h2 class="section-title">Sobre Mim</h2>
-        <div class="about-content">
-          <p>
-            Sou um desenvolvedor full stack apaixonado por criar soluções web inovadoras.
-            Com experiência em várias tecnologias modernas, busco sempre aprender e evoluir
-            na minha carreira.
-          </p>
+        <h2 class="section-title">Entre em Contato</h2>
+
+        <p class="about-description">
+          Ficarei feliz em conversar com você! Preencha o formulário abaixo ou utilize minhas redes para entrar em
+          contato.
+        </p>
+
+        <form [formGroup]="contactForm" (ngSubmit)="sendEmail()" class="contact-form">
+          <input type="text" placeholder="Seu nome" formControlName="nome" required />
+          @if (contactForm.get('nome')?.invalid && (contactForm.get('nome')?.dirty || contactForm.get('nome')?.touched))
+          {
+          <div class="alert alert-danger">
+            Nome é obrigatório.
+          </div>
+          }
+
+          <input type="email" placeholder="Seu email" formControlName="email" required />
+          @if (contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)) {
+          <div class="alert alert-danger">
+            @if (contactForm.get('email')?.errors?.['required']) {
+            <div>Email é obrigatório.</div>
+            }
+            @if (contactForm.get('email')?.errors?.['email']) {
+            <div>Email inválido.</div>
+            }
+          </div>
+          }
+
+          <input placeholder="Sua mensagem" rows="5" formControlName="mensagem" required>
+          @if (contactForm.get('mensagem')?.invalid && (contactForm.get('mensagem')?.dirty || contactForm.get('mensagem')?.touched)) {
+          <div class="alert alert-danger">
+            Mensagem é obrigatória.
+          </div>
+          }
+
+          <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">
+            Enviar
+          </button>
+        </form>
+
+        <div class="contact-info">
+          <a href="https://github.com/vjarruda" target="_blank"><fa-icon [icon]="faGithub"></fa-icon></a>
+          <a href="https://www.linkedin.com/in/viniciusarruda25/" target="_blank"><fa-icon [icon]="faLinkedin"></fa-icon></a>
         </div>
       </div>
     </section>
-  <app-footer></app-footer>
+
+    <app-footer></app-footer>
+  </div>
 </body>
