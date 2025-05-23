@@ -21,14 +21,14 @@ body {
  .layout {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: vh;
 }
 
 .container {
   flex: 1;
   width: 90vw;
   max-width: 900px;
-  margin: 40px auto;
+  margin: 10px auto;
   padding: 20px;
   background: #fff;
   border-radius: 12px;

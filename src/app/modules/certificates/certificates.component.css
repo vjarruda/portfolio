@@ -10,14 +10,14 @@ html, body {
   .layout {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+
   }
 
   .container {
     flex: 1;
     width: 90vw;
     max-width: 900px;
-    margin: 40px auto;
+    margin: 10px auto;
     padding: 30px;
     background: #ffffff;
     border-radius: 12px;
@@ -44,14 +44,6 @@ html, body {
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  }
-
-  app-footer {
-    display: block;
-    width: 100%;
-    color: white;
-    text-align: center;
-    margin-top: auto;
   }
 
   @media (max-width: 600px) {

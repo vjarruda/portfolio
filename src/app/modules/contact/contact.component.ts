@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { FooterComponent } from '../../shared/components/footer/footer.component';
-import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -8,7 +6,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-contact',
-  imports: [FooterComponent, NavbarComponent, ReactiveFormsModule, FontAwesomeModule],
+  imports: [ReactiveFormsModule, FontAwesomeModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })

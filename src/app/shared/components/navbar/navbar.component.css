@@ -1,8 +1,5 @@
-header {
-    background: #333;
-    color: white;
-    padding: 1rem;
-    font-size: 1.5rem;
+html{
+    background-color:  #f9f9f9;
 }
 
 :host {
@@ -31,4 +28,8 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
+}
+
+.nav-item{
+    cursor: pointer;
 }
